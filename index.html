@@ -1,0 +1,47 @@
+<!--- 
+This is the  index.html of the main website. You don't need to touch it but you can use it as you wish (follow the license)
+--->
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>is-a-dev.ga</title>
+  <link href="style.css" rel="stylesheet" type="text/css" />
+</head>
+
+<body>
+  <div id="left-side" class="side">
+  <h2 class="title">
+    Get yourself a <span class="fancy">free</span> sub-domain!  
+  </h2>
+</div>
+<div id="right-side" class="side">
+  <h2 class="title">
+    Get yourself a <span class="fancy">free</span> sub-domain!  
+  </h2>
+</div>
+
+<a id="source-link" class="meta-link" href="https://github.com/zerealone/is-a-dev.ga" target="_blank">
+  <i class="fa-solid fa-link"></i>
+  <span class="roboto-mono">Github</span>
+</a>
+
+<a id="yt-link" class="meta-link" href="https://ko-fi.com/zerealone" target="_blank">
+  <i class="fa-brands fa-youtube"></i>
+  <span>Donate</span>
+</a>
+</body>
+<script>
+  const left = document.getElementById("left-side");
+
+const handleMove = e => {
+  left.style.width = `${e.clientX / window.innerWidth * 100}%`;
+}
+
+document.onmousemove = e => handleMove(e);
+
+document.ontouchmove = e => handleMove(e.touches[0]);
+</script>
+</html>
